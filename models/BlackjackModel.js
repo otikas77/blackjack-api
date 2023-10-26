@@ -10,7 +10,7 @@ export class BlackjackModel {
     let value = 0;
 
     // Sort all "Ace" cards to end of the list;
-    const sortedHand = drawnCards.sort(({ value }) =>
+    const sortedHand = [...drawnCards].sort(({ value }) =>
       value === "Ace" ? 1 : -1
     );
 
