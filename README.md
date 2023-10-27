@@ -16,7 +16,7 @@ Blackjack is a popular card game played in casinos worldwide. The game is also k
 
 5. **Winning the Game** - The player with the highest hand total that doesn't bust wins the round. If the dealer busts, all remaining players win.
 
-## How to run a code
+# How to run a code
 
 To run the code, follow these steps:
 
@@ -26,7 +26,7 @@ To run the code, follow these steps:
 
 3. Run code by "npm run start"
 
-# Web Application (Requires Separate Setup)
+## Web Application (Requires Separate Setup)
 
 To interact with the web version of the application, follow these steps:
 
@@ -34,7 +34,7 @@ To interact with the web version of the application, follow these steps:
 
 2. Follow the provided instructions to set up the web application.
 
-## Running Tests
+# Running Tests
 
 To run tests for the code, follow these steps:
 
