@@ -1,16 +1,16 @@
-import { BlackjackBodySchema } from "../schemas/blackJack.js";
-import { BlackjackModel } from "../models/BlackjackModel.js";
+const BlackjackBodySchema =  require("../schemas/blackJack.js");
+const BlackjackModel =  require("../models/BlackjackModel.js");
 
-import { botDrawCardLogic } from "../helpers/index.js";
+const botDrawCardLogic = require("../helpers/botDrawCardLogic.js");
 
-export const dealerTurn = (req, res, next) => {
+const dealerTurn = (req, res, next) => {
   let body;
 
   try {
     body = BlackjackBodySchema.parse(req.body);
   } catch (error) {
     console.error(error);
-    res.status(422).send(error);
+    return res.status(422).send(error);
   }
 
   const { cardDeck, hand } = body;
@@ -33,3 +33,7 @@ export const dealerTurn = (req, res, next) => {
 
   res.status(200).send(hand);
 };
+
+module.exports = {
+  dealerTurn
+}

@@ -1,4 +1,4 @@
-export class CardDeckModel {
+class CardDeckModel {
   suit = ["Hearts", "Diamonds", "Spades", "Clubs"];
   values = {
     2: 2,
@@ -53,3 +53,5 @@ export class CardDeckModel {
     return _desk;
   }
 }
+
+module.exports = CardDeckModel;

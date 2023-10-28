@@ -1,6 +1,6 @@
-import { expect } from "chai";
-import { startGame } from "../controllers/Backjack.controller.js";
-import  { CardDeckModel } from '../models/CardDeckModel.js'; 
+const { expect } = require("chai");
+
+const { startGame } = require("../src/controllers/Backjack.controller.js");
 
 describe("startGame Controller", () => {
   it("Should return data with status 200", () => {

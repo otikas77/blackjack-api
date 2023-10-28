@@ -1,8 +1,8 @@
-import { BlackjackModel } from "../models/BlackjackModel.js";
-import { CardDeckModel } from "../models/CardDeckModel.js";
-import { BlackjackBodySchema } from "../schemas/blackJack.js";
+const  BlackjackModel =  require("../models/BlackjackModel.js");
+const  CardDeckModel =  require("../models/CardDeckModel.js");
+const  BlackjackBodySchema = require("../schemas/blackJack.js");
 
-export const startGame = (req, res, next) => {
+const startGame = (req, res, next) => {
   const cardDeck = new CardDeckModel();
 
   const data = cardDeck.desk.reduce(
@@ -27,16 +27,16 @@ export const startGame = (req, res, next) => {
   res.status(200).send(data);
 };
 
-export const drawCard = (req, res, next) => {
+const drawCard = (req, res, next) => {
   let body;
 
   try {
     body = BlackjackBodySchema.parse(req.body);
   } catch (error) {
     console.error(error);
-    res.status(422).send(error);
+    return res.status(422).send(error);
   }
-
+    
   const { cardDeck, hand } = body;
 
   const game = new BlackjackModel(cardDeck, hand);
@@ -52,3 +52,8 @@ export const drawCard = (req, res, next) => {
     drawnCardPoints,
   });
 };
+
+module.exports = {
+  startGame,
+  drawCard
+}

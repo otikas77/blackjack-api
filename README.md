@@ -40,4 +40,6 @@ To run tests for the code, follow these steps:
 
 1. After cloning the repository and installing NPM packages (refer to steps 1 and 2 in the "How to Run the Code" section).
 
-2. Run code by "npm run test"
+2. Run code "npm run test"
+
+3. Run "npm run coverage" for tests coverage check

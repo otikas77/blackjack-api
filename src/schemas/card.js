@@ -1,8 +1,10 @@
-import { z as zod } from "zod";
+const zod = require("zod");
 
-export const CardSchema = zod.object({
+const CardSchema = zod.object({
   id: zod.string(),
   suit: zod.string(),
   value: zod.string(),
   points: zod.number().or(zod.array(zod.number())),
 });
+
+module.exports = CardSchema;

@@ -1,9 +1,10 @@
-import express from "express";
+const express = require("express");
 
-import { cors } from "./utils/cors.js";
+const cors =  require("./src/utils/cors.js");
 
-import blackjackRoute from "./routes/Blackjack.js";
-import dealerRoute from './routes/Dealer.js';
+const blackjackRoute = require("./src/routes/Blackjack.js");
+
+const dealerRoute = require('./src/routes/Dealer.js');
 
 const app = express();
 

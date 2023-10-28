@@ -1,4 +1,4 @@
-export class BlackjackModel {
+class BlackjackModel {
   drawnCard;
 
   constructor(cardDeck, hand) {
@@ -72,3 +72,5 @@ export class BlackjackModel {
     return status;
   }
 }
+
+module.exports = BlackjackModel;

@@ -1,5 +1,5 @@
-import { expect } from 'chai';
-import { CardDeckModel } from '../models/CardDeckModel.js';
+const { expect } = require("chai");
+const CardDeckModel = require('../src/models/CardDeckModel.js') ;
 
 describe('CardDeckModel', () => {
   let cardDeck;

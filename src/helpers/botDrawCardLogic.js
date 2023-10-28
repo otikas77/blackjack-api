@@ -1,6 +1,6 @@
-import { getRandomNumber } from "./getRandomNumber.js";
+const getRandomNumber =  require("./getRandomNumber.js");
 
-export const botDrawCardLogic = (currentPoints) => {
+const botDrawCardLogic = (currentPoints) => {
   const chance = getRandomNumber(10);
 
   switch (true) {
@@ -16,3 +16,5 @@ export const botDrawCardLogic = (currentPoints) => {
       return chance > 50;
   }
 };
+
+module.exports = botDrawCardLogic;

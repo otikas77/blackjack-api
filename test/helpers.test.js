@@ -1,5 +1,7 @@
-import { getRandomNumber, botDrawCardLogic } from "../helpers/index.js";
-import { expect } from "chai";
+const { expect } = require("chai");
+
+const getRandomNumber = require("../src/helpers/getRandomNumber.js");
+const botDrawCardLogic = require("../src/helpers/botDrawCardLogic.js");
 
 describe("getRandomNumber helper", () => {
   const N = 10;
